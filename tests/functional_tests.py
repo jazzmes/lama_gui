@@ -13,6 +13,9 @@ class InitialProviderAgentListTest(unittest.TestCase):
     def test_visualization_of_provider_agents_list(self):
         # open homepage
         self.browser.get('http://localhost:8000')
+
+        # Note: we are unable to test status code using selenium (feature not supported)
+        # check title of the page
         self.assertIn('LAMA', self.browser.title)
 
         self.fail('Finish test!')
