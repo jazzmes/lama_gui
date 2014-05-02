@@ -10,7 +10,7 @@ class TestHomePage(TestCase):
         self.assertEqual(reverse('home'), '/')
         self.assertEqual(reverse('monitor.views.home'), '/')
 
-    def test_something(self):
+    def test_home_page(self):
         request = HttpRequest()
         func, args, kwargs = resolve('/')
         response = func(request)

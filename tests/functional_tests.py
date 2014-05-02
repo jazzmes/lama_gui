@@ -18,14 +18,17 @@ class InitialProviderAgentListTest(unittest.TestCase):
         # check title of the page
         self.assertIn('LAMA', self.browser.title)
 
-        self.fail('Finish test!')
         # there is an menu option to see all provider agents
+        nav = self.browser.find_element_by_tag_name('nav')
+        self.assertIsNotNone(nav)
+        provider_agents_link = nav.find_element_by_xpath('ul/li[text()="Provider Agents"]')
+        self.assertIsNotNone(provider_agents_link)
 
         # click the option provider agents
-
         # should see a table with a list of provider agents
 
         # each line should contains id and ip address of the agent
+        self.fail('Finish the test')
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
