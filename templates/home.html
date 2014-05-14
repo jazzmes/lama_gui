@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAMA {% block subtitle %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            {% block header %}
+            {% include 'nav.html' %}
+            {% endblock %}
+        </header>
+        <div id="home_main">
+            {% block main %}{% endblock %}
+        </div>
+        <footer>
+            {% block footer %}{% endblock %}
+        </footer>
+    </body>
+</html>
